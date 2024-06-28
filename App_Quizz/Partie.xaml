@@ -1,0 +1,18 @@
+﻿<Window x:Class="App_Quizz.Partie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App_Quizz"
+        mc:Ignorable="d"
+        Title="Partie" Height="450" Width="800" Background="Aquamarine" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="330,28,0,0" TextWrapping="Wrap" Text="{Binding LibQuestion}" VerticalAlignment="Top" Name="libQ"/>
+        <Button HorizontalAlignment="Left" Margin="330,77,0,0" Content="{Binding PropUn}" VerticalAlignment="Top" Name="P1" Click="P1_Click"/>
+        <Button HorizontalAlignment="Left" Margin="330,131,0,0" Content="{Binding PropDeux}" VerticalAlignment="Top" Name="P2" Click="P2_Click"/>
+        <Button HorizontalAlignment="Left" Margin="330,179,0,0" Content="{Binding PropTrois}" VerticalAlignment="Top" Name="P3" Click="P3_Click"/>
+        <Button HorizontalAlignment="Left" Margin="330,224,0,0" Content="{Binding PropQuatre}" VerticalAlignment="Top" Name="P4" Click="P4_Click"/>
+        
+
+    </Grid>
+</Window>

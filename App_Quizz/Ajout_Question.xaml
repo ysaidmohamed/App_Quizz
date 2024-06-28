@@ -1,0 +1,53 @@
+﻿<Window x:Class="App_Quizz.Ajout_Question"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App_Quizz"
+        mc:Ignorable="d"
+        Title="Ajout_Question" Height="450" Width="800" Background="Aquamarine">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Question" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Name="Q1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="Proposition 1" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Name="P1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,138,0,0" TextWrapping="Wrap" Text="Proposition 2" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Name="P2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="Proposition 3" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Name="P3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,270,0,0" TextWrapping="Wrap" Text="Proposition 4" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Name="P4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,333,0,0" TextWrapping="Wrap" Text="Réponse" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,353,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Name="R1"/>
+        <Slider HorizontalAlignment="Left" Margin="365,96,0,0" VerticalAlignment="Top" Height="24" Width="161" Name="Diff" Minimum="0" Maximum="2" TickFrequency="1" SmallChange="1" LargeChange="1" ValueChanged="Diff_ValueChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="397,42,0,0" TextWrapping="Wrap" Text="Difficulté" VerticalAlignment="Top" RenderTransformOrigin="-0.902,0.833"/>
+        <Button Content="Ajouter Question" HorizontalAlignment="Left" Margin="608,82,0,0" VerticalAlignment="Top" Width="128" Height="30" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="546,96,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.902,0.833" Name="SlideValue"/>
+        <Separator HorizontalAlignment="Left" Height="146" Margin="288,82,0,0" VerticalAlignment="Top" Width="495" RenderTransformOrigin="-0.88,-0.507"/>
+        <GridSplitter HorizontalAlignment="Left" Height="252" Margin="288,159,0,0" VerticalAlignment="Top" Width="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="316,170,0,0" TextWrapping="Wrap" Text="Espace Quiz" VerticalAlignment="Top" RenderTransformOrigin="-0.902,0.833"/>
+        <ComboBox HorizontalAlignment="Left" Margin="433,206,0,0" VerticalAlignment="Top" Width="120" Name="lstQuiz" SelectionChanged="lstQuiz_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NumQuizz}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="433,264,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Name="lstQuestions">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding LibQuestion}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Ajouter Question au Quiz" HorizontalAlignment="Left" Margin="526,353,0,0" VerticalAlignment="Top" Width="158" Height="24" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="452,185,0,0" TextWrapping="Wrap" Text="Choix du Quiz" VerticalAlignment="Top" RenderTransformOrigin="-0.902,0.833"/>
+        <TextBlock HorizontalAlignment="Left" Margin="445,235,0,0" TextWrapping="Wrap" Text="Choix de la question" VerticalAlignment="Top" RenderTransformOrigin="-0.902,0.833"/>
+
+
+    </Grid>
+</Window>
