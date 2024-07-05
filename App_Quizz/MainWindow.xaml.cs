@@ -47,8 +47,16 @@ namespace App_Quizz
             else
             {
                 string joueur = (Pseudo.SelectedItem as Joueur).NomJoueur;
-                Partie nouveauQuiz = new Partie(joueur, (int)Diff.Value);
-                nouveauQuiz.ShowDialog();
+                List<Quiz> quiz1 = gst.GetQuiz((int)Diff.Value);
+                if (quiz1.Count == 0)
+                {
+                    MessageBox.Show("Aucun quiz n'est disponible pour ce niveau de difficulté", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    Partie nouveauQuiz = new Partie(joueur, (int)Diff.Value);
+                    nouveauQuiz.ShowDialog();
+                }
             }
             
         }
